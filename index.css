@@ -404,19 +404,33 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header_boston.jpg');
+    position: relative; /* Ensure positioning context for the pseudo-element */
     height: 100vh;
+    font-size: var(--font-size-normal);
+    overflow: hidden; /* Hide any overflow */
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)), 
+                url('./images/header_boston.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    font-size: var(--font-size-normal);
+    filter: blur(8px); /* Adjust blur radius as needed */
+    z-index: 1; /* Ensure the blur is behind the text */
 }
 
 .header__text {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center vertically */
+    z-index: 2; /* Ensure text is above the blur */
 }
 
 .header__text p {
@@ -435,6 +449,7 @@ body:not(.user-is-tabbing) a:focus {
         transform: scale(.8);
     }
 }
+
 
 /* --------------------------------------- */
 /* ----- Work ----- */
