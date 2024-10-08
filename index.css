@@ -443,6 +443,7 @@ body:not(.user-is-tabbing) a:focus {
 .header__text {
     z-index: 2; /* Ensure text is above the blur */
     text-align: center; /* Center the text */
+    position: relative;
 }
 
 .header__text p {
