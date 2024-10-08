@@ -408,6 +408,10 @@ body:not(.user-is-tabbing) a:focus {
     height: 100vh;
     font-size: var(--font-size-normal);
     overflow: hidden; /* Hide any overflow */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
 }
 
 .header::before {
@@ -425,12 +429,20 @@ body:not(.user-is-tabbing) a:focus {
     z-index: 1; /* Ensure the blur is behind the text */
 }
 
+.navbar {
+    position: absolute; /* Position navbar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; /* Ensure it appears above the blurred background */
+    text-align: center; /* Center the navbar items */
+    padding: 1rem; /* Add some padding */
+    background: rgba(255, 255, 255, 0.8); /* Optional: background for better visibility */
+}
+
 .header__text {
-    position: absolute;
-    top: 50%;
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center vertically */
     z-index: 2; /* Ensure text is above the blur */
+    text-align: center; /* Center the text */
 }
 
 .header__text p {
@@ -449,6 +461,7 @@ body:not(.user-is-tabbing) a:focus {
         transform: scale(.8);
     }
 }
+
 
 
 /* --------------------------------------- */
