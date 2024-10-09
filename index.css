@@ -426,6 +426,7 @@ body:not(.user-is-tabbing) a:focus {
                 url('./images/header_boston.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     filter: blur(8px); /* Adjust blur radius as needed */
     z-index: 1; /* Ensure the blur is behind the text */
 }
