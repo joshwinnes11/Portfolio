@@ -359,6 +359,7 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 400px) {
     .nav__item:not(:last-child) {
         margin-right: var(--gutter-normal);
+      display: flex;
     }
 }
 
@@ -583,7 +584,8 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(min-width: 901px) {
     .about__text {
-        flex: 0 0 35%;
+      flex: 0 0 35%;
+      text-align: justify;  
     }
     
     .about__photo-container {
