@@ -408,7 +408,7 @@ body:not(.user-is-tabbing) a:focus {
     position: relative; /* Ensure positioning context for the pseudo-element */
     height: 100vh;
     font-size: var(--font-size-normal);
-    overflow: hidden; /* Hide any overflow */
+    overflow: visible; /* Hide any overflow */
     display: flex; /* Use flexbox for centering */
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center vertically */
