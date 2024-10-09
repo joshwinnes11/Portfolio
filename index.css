@@ -474,6 +474,8 @@ body:not(.user-is-tabbing) a:focus {
 .work__box {
     display: flex;
     align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 @media(max-width: 900px) {
